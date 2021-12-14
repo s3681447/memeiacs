@@ -1,0 +1,481 @@
+/* UTILITIES */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Source Code Pro', monospace;
+    height: 100%;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.full-height{
+    max-height: 180%;
+    background: linear-gradient(145deg, rgba(4,45,108,1) 0%, rgba(4,13,33,1) 18%, rgba(4,13,33,1) 82%, rgba(97,58,124,1) 98%);
+}
+
+@keyframes rainbow { 
+    0%{background-position:left}
+    50%{background-position:right}
+    100%{background-position:left}
+  }
+
+/* NAV_BAR STYLE */
+
+.nav_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 2%;
+}
+
+.style-nav{
+    background: linear-gradient(145deg, rgba(4,45,108,1) 0%, rgba(4,13,33,1) 18%);
+}
+
+.logo{
+    margin-left: 7%;
+}
+
+.logo a img{
+    width: 150px;
+    height: auto;
+    padding-top: 25px;
+}
+
+.nav_bar_link a{
+    background: linear-gradient(to right, rgb(156,242,208),rgb(109,184,247), rgb(97,58,124,1));
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip:text;
+    color:rgb(203, 210, 252);
+    transition: color .2s ease-in-out;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.nav_bar_link img{
+    width: 17px;
+    height: auto;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(118deg) brightness(102%) contrast(101%);
+}
+
+.nav_bar_link a:hover{
+    color:rgba(0,0,0,0);
+    transition: 0.8s ease;
+}
+
+/* NAVBAR MENU */
+.main_menu{
+    display: flex;
+    gap: 3em;
+}
+
+.main_menu li{
+    padding: 3px 18px;
+}
+/*MENU DROPDOWN*/
+
+.project_menu{
+    position: relative;
+}
+
+.profile_menu{
+    position: relative;
+}
+
+.dropdown_menu{
+    display: none;
+    background-color: rgb(231, 234, 252);
+    position: absolute;
+    top: 25px;
+    border-radius: 10px;
+    padding: 17px;
+}
+
+.dropdown_menu li + li{
+    margin-top: 10px;
+}
+
+.dropdown_menu li{
+    padding: 5px;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown_menu li a{
+    color: black;
+}
+
+.project_menu:hover .dropdown_menu{
+    display: block;
+}
+
+.profile_menu:hover .dropdown_menu{
+    display: block;
+}
+
+.sources {
+    margin-right: 7%;
+    margin-left: 1%;
+}
+
+.sources a{
+    display: flex;
+    color: rgb(202,209,251);
+    background: linear-gradient(to right, rgb(156,242,208),rgb(109,184,247), rgb(97,58,124,1));
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip:text;
+    transition: color .2s ease-in-out;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.sources a img{
+    width: 25px;
+    height: auto;
+    padding-right: 7px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(118deg) brightness(102%) contrast(101%);
+}
+
+.sources a:hover{
+    color:rgba(0,0,0,0);
+    transition: 0.8s ease;
+}
+
+/* HOMEPAGE CONTENT */
+
+.pages-content{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.pages-content h1{
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(156,242,208), rgb(50, 151, 235));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Abril Fatface", sans-serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+.pages-content p{
+    text-align: justify;
+    color: #7e90af;
+    font-size: 17px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 15px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+}
+
+.pages-content p img{
+    width: 15px;
+    height: auto;
+    filter: invert(100%) sepia(74%) saturate(2%) hue-rotate(74deg) brightness(107%) contrast(101%);
+}
+
+.achievement{
+    padding-top: 5%;
+}
+
+.achievement li h1 img{
+    padding-right: 5px;
+    width: 30px;
+    height: auto;
+    filter: invert(100%) sepia(74%) saturate(2%) hue-rotate(74deg) brightness(107%) contrast(101%);
+}
+
+.achievement ul{
+    display: flex;
+    gap: 2em;
+    margin-left: 8%;
+    margin-right: 8%;
+    align-items: center;
+    text-align: left;
+}
+
+.achievement ul h1{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 25px;
+}
+
+.achievement li a img{
+    box-shadow: rgb(11,43,88) 20px -22px 70px 2px;
+    width: 90%;
+    height: auto;
+}
+
+.achievement li a img:hover{
+    width: 93%;
+    height: auto;
+}
+
+/* PROFILE CONTENT */
+
+.profile-about{
+    display: inline-block;
+    align-items: center;
+    background: rgb(227, 230, 230);
+}
+
+.profile-intro{
+    margin-left: 8%;
+    margin-right: 8%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 0 0 20px 20px;;
+}
+
+.profile-about div{
+    margin-bottom: 1%;
+}
+
+.profile-intro h1{
+    font-size: 40px;
+    background: -webkit-linear-gradient(rgb(82,225,231), rgb(178,166,245));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Abril Fatface", sans-serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.profile-intro ul{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    text-align: left;
+}
+
+.profile-ava {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.profile-intro h3{
+    font-size: 30px;
+    background: -webkit-linear-gradient(rgb(82,225,231), rgb(178,166,245));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Abril Fatface", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.profile-about p img{
+    width: 15px;
+    height: auto;
+}
+
+.profile-about p{
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 800;
+}
+
+.online-tests{
+    display: flex;
+    gap: 7em;
+    margin-left: 8%;
+    margin-right: 8%;
+    background: rgba(4,13,33,1);
+    padding: 40px;
+    border-radius: 20px
+}
+
+.online-tests span{
+    color: #c6d3e9;
+}
+
+.online-tests p{
+    font-size: 18px;
+    color:  #8193b2;
+    font-weight: 800;
+}
+
+.online-tests p img{
+    filter: invert(100%) sepia(74%) saturate(2%) hue-rotate(74deg) brightness(107%) contrast(101%);
+}
+
+.tests-img img{
+    box-shadow: rgb(11,43,88) 40px 0px 70px 2px;
+    border-radius: 20px;
+    margin-left: 60px;
+    width: 500px;
+    height: auto;
+}
+
+/* PAGES CONTENT */
+.pages-section{
+    display: inline-block;
+    margin-left: 8%;
+    margin-right: 8%;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.pages-section h1{
+    text-align: left;
+    font-size: 50px;
+    background: -webkit-linear-gradient(90deg, rgba(167,98,209,1) 23%, rgba(193,90,159,1) 50%, rgba(230,79,91,1) 77%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Abril Fatface", sans-serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+.pages-section h2{
+    text-align: center;
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 17px;
+    color: rgb(92, 95, 99);
+    padding-bottom: 20px;
+}
+
+.pages-section h3{
+    text-align: left;
+    font-size: 30px;
+    font-family: "Abril Fatface", sans-serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    color: rgb(36,41,47);
+}
+
+.pages-section h4{
+    text-align: left;
+    font-size: 22px;
+    font-family: "Abril Fatface", sans-serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    color: rgb(92, 95, 99);
+}
+
+.pages-section h5{
+    font-style: italic;
+    text-align: left;
+    font-size: 20px;
+    font-family: "Abril Fatface", sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    background: -webkit-linear-gradient(51deg, rgba(199,76,168,1) 14%, rgba(49,129,246,1) 79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pages-section p{
+    text-align: justify;
+    color: rgb(106,124,156);
+    font-size: 17px;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.section-links{
+    color: blue;
+    border-bottom: blue solid 1.5px;
+}
+
+.section-links:hover{
+    border-bottom: none;
+}
+
+.pages-section span{
+    color: rgb(36,41,47);
+    font-weight: 800;
+}
+
+.pages-section p img{
+    width: 15px;
+    height: auto;
+}
+
+.mock-fighome-img {
+    width: 600px;
+    height: auto;
+}
+
+.mock-fig-img {
+    width: 400px;
+    height: auto;
+}
+
+.mock-fig-long-img{
+    width: auto;
+    height: 150px;
+}
+
+.mock-icons{
+    width: 25px !important;
+    height: auto !important;
+    background: rgb(212,230,241);
+}
+
+/* COPYRIGHT */
+.copyright {
+    text-align: center;
+    color: rgb(202,209,251);
+    font-size: 16px;
+    height: auto;
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+
+.copyright p{
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.copyright1{
+    background: linear-gradient(145deg, rgba(4,13,33,1) 82%, rgba(97,58,124,1) 98%);
+    text-align: center;
+    color: rgb(202,209,251);
+    font-size: 16px;
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+
+.copyright1 p{
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
