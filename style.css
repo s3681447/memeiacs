@@ -62,7 +62,7 @@ li{
     background: linear-gradient(to right, rgb(156,242,208),rgb(109,184,247), rgb(97,58,124,1));
     background-size: 200% 200%;
     animation: rainbow 2s ease-in-out infinite;
-    /*background-clip: content-box;*/
+    background-clip: text;
     -webkit-background-clip:text;
     color:rgb(203, 210, 252);
     transition: color .2s ease-in-out;
@@ -85,7 +85,6 @@ li{
 /* NAVBAR MENU */
 .main_menu{
     display: flex;
-    margin-top: 30px;
     gap: 3em;
 }
 
@@ -134,7 +133,6 @@ li{
 }
 
 .sources {
-    margin-top: 30px;
     margin-right: 7%;
     margin-left: 1%;
 }
@@ -145,7 +143,7 @@ li{
     background: linear-gradient(to right, rgb(156,242,208),rgb(109,184,247), rgb(97,58,124,1));
     background-size: 200% 200%;
     animation: rainbow 2s ease-in-out infinite;
-    /*background-clip: content-box;*/
+    background-clip: text;
     -webkit-background-clip:text;
     transition: color .2s ease-in-out;
     font-size: 20px;
